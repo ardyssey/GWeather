@@ -1,0 +1,11 @@
+build
+.idea
+gradle
+logs
+/owmkey.properties
+/GWeatherLocations.properties
+/GWeatherLocations.properties.old
+/GWeatherLocations_testing.properties
+/GWeatherLocationstesting.properties
+lib
+.gradle
