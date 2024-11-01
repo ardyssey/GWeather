@@ -1,6 +1,4 @@
 build
-.idea
-gradle
 logs
 /owmkey.properties
 /GWeatherLocations.properties
@@ -8,4 +6,4 @@ logs
 /GWeatherLocations_testing.properties
 /GWeatherLocationstesting.properties
 lib
-.gradle
+/target/
