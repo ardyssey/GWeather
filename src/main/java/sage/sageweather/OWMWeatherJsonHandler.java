@@ -227,9 +227,9 @@ public class OWMWeatherJsonHandler {
             day.setDate(utils.GetJSONAsDate("dt", item));
             day.setType(Type.Day);
 
-            //get temp element from daily - use for day and night temp (below)
+            //get temp element from daily - use for max day and min night temp (below)
             JsonObject tempDetails = item.getAsJsonObject("temp");
-            day.setTemp(utils.GetJSONAsInteger("day", tempDetails));
+            day.setTemp(utils.GetJSONAsInteger("max", tempDetails));
 
             //get weather elements from daily
             JsonArray dailyweatherDetailsArray = item.getAsJsonArray("weather");
@@ -301,7 +301,7 @@ public class OWMWeatherJsonHandler {
             //Night related items that are different from the day items
             night.setType(Type.Night);
 
-            night.setTemp(utils.GetJSONAsInteger("night", tempDetails)); //tempDetail created above when getting day temp
+            night.setTemp(utils.GetJSONAsInteger("min", tempDetails)); //tempDetail created above when getting day temp
             night.setFeelsLike(utils.GetJSONAsInteger("night", feelsDetails));
             night.setCode(GetCodeFromName(utils.GetJSONAsString("id", dailyweatherDetails),Type.Night));
 
